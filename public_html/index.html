@@ -1,0 +1,136 @@
+<html>
+<!--<html slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<head>
+    <title>Cycling Safety Project</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap-accessibility.css" rel="stylesheet">
+    <link href="./css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-accessibility.min.js"></script>
+
+    <!-- keep banner position -->
+    <script type="text/javascript">
+        $(document).ready(function(){                
+            // get timezone
+            var visitortime = new Date();
+            var visitortimezone = "GMT " + -visitortime.getTimezoneOffset()/60;
+            $('#timezone').val(visitortimezone);
+            
+            var jumboHeight = $('.jumbotron').outerHeight();
+            function parallax(){
+                var scrolled = $(window).scrollTop();
+                $('.banner').css('height', (jumboHeight-scrolled) + 'px');
+            }
+            $(window).scroll(function(e){
+                console.log(jumboHeight);
+            	parallax();
+            });
+        });
+    </script>
+    <style type="text/css">
+        .container{width:90%}
+    </style>
+</head>
+
+<body>
+
+
+    <!-- banner -->
+    <div class="banner"></div>
+    <div class="jumbotron">
+        <div class="text-bg">
+        <h1>Cycling Safety Project</h1>      
+    	  <p><strong>We provide accurate, city-wide cycling safety maps to improve the cycling conditions in cities. Join us!</strong></p>
+         </div>
+    </div>     
+
+    <div class="container" >
+        <!-- Row: left is project description; right is participate button -->
+        <div class="row">
+            <div class="col-md-9">
+                <!-- Two step header -->
+                <div class="row">
+                    <div class="col-md-12 height-200-pixel">
+                        <h1 class="text-center landing-page-header">
+                            Two simple steps to help us create a cycling safety map for DC!
+                        </h1>
+                    </div>
+                </div><!-- /two step header -->
+                
+                <!-- two step pic -->
+                <div class="row">            
+                    <!-- left: step one pic+text -->
+                    <div class="col-sm-6">
+                        <figure>
+                            <img src="./cyclingsafety_files/Step1.png" class="img-responsive center-block" width='90%'>
+                            <figcaption class="text-center"><big>Step 1: Watch videos recorded by cyclists</big></figcaption>
+                        </figure>
+                       
+                    </div>
+                    <!-- right: step two pic+text -->
+                    <div class="col-sm-6" >
+                        <figure>
+                            <img src="./cyclingsafety_files/Step2.png" class="img-responsive center-block" width='90%'>
+                            <figcaption class="text-center"><big>Step 2: Rate the safety level of the routes</big></figcaption>
+                         </figure>
+                    </div>
+                </div><!-- /two step pic -->
+                        
+                <div class="spacer20"></div><!-- add space -->
+                
+                <!-- Content: explaining the project  -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p style="margin:0 2%">You need an email address to participate. We will ask you a few questions regarding your cycling experience and then you will be able to start watching and rating videos. You can stop at any time you wish. The ratings you and other cyclists provide are averaged for each street; and once you are done rating, we will show you the cycling safety map for D.C with the ratings collected so far. With your help, we will be able to create safety maps like the one shown below, and to understand what are the factors that make certain streets safer. The more videos you rate, the more you'll be helping cycling safety and science!  
+                        </p>
+                    </div>
+                </div> <!-- /Content: explaining the project  -->
+                
+                <div class="spacer20"></div><!-- add space -->
+                
+                <!-- demo of safety level map -->
+                <div class="row">
+                    <div class="col-sm-6"><figure>
+                        <img src="./cyclingsafety_files/DCSafety0-sm.png" alt="A map of Washington, D.C." class="img-responsive center-block"  width='90%'>
+                        <figcaption class="text-center">Washington, D.C.</figcaption>
+                    </figure></div>
+                    <div class="col-sm-6"><figure>
+                        <img src="./cyclingsafety_files/DCSafety1-sm.png" alt="Washington, D.C with safety level ratings from cyclists like you (simulation). " class="img-responsive center-block" width='90%'>
+                        <figcaption class="text-center">Washington, D.C with safety level ratings from cyclists like you (simulation). </figcaption>
+                    </figure></div>                    
+                    <div class="spacer20"></div>
+                </div><!-- /demo of safety level map -->
+            </div> <!-- /left column: description of project -->
+        
+             <!-- right column: participate button -->
+            <div class='col-md-3 center-block'>
+                <form id="myform" method="post" action="direct_email.php">
+                    <div class="spacer30"></div>   <!-- add space -->
+                    <label for="inputEmail" ><p>Type your email address here to participate</p></label>
+                    <input type="email" id="inputEmail" class="form-control input-lg" placeholder="Email address" required autofocus name="email" style='padding:10px'>
+                    <input type="hidden" id="timezone", name='timezone'>
+                    <div class="spacer20"></div>   <!-- add space -->
+                    <button class="btn btn-lg" id="participate-button">Participate</button>
+                </form>
+            </div> <!-- /right column: participate button -->
+        </div> <!-- /Row: left is project description; right is participate button -->
+    </div><!-- End Container -->
+    
+    <div class="spacer20"></div>   <!-- add space -->
+    
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted footer-text">
+                Cycling Safety project is designed and lead by the <a href="http://www.urbancomputinglab.org">Urban Computing Lab</a> at the <a href="http://www.umd.edu/">University of Maryland</a> with support from the <a href="http://www.nsf.gov">National Science Foundation. </a>  If you have any suggestion or question, contact us at <a href="mailto:umdcyclingsafety@gmail.com">umdcyclingsafety@gmail.com</a>
+            </p>
+            <p class="text-muted footer-text">
+                <span id="application-version">Last updated: 2017-03-30</span>
+            </p>
+        </div>
+    </footer>
+
+</body></html>
