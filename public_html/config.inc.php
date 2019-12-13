@@ -4,8 +4,8 @@
 # ===========================
 
 # for PDO
-$DB_USER = 'cycling';
-$DB_PASSWD = '@2n54a=@]ZQ4';
+$DB_USER = '';
+$DB_PASSWD = '';
 $dbname = "cyclings_vid1";  # or other name for the database you prefer
 $dbhost = "your-database-host-name";
 $dbport = 3306;  # your database port
