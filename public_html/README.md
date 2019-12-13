@@ -1,3 +1,4 @@
+To check if the website works correctly, follow the steps below.
 
 1. create a new account
 2. choose experience level
@@ -12,12 +13,3 @@
 11. back to home page
 12. log in again, and you should be on the rating page directly.
 
-If the website works correctly, you should be able to complete these 12 steps. But loading the map might take seconds.
-
-In the meantime, please keep a record of everything, including:
-1. email
-2. experience level
-3. survey questions answers
-4. rating(video title, safety level, familiar or not, tags, comments)
-
-I will check the database whether data is inserted correctly.
